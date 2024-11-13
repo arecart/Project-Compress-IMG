@@ -63,3 +63,18 @@ param sortie = Vecteur(1x64)
 Compress
 param entrée = vecteur 1x64
 param sortie = vecteur
+
+[Tab.bloc] = Creabloc image
+Pour i=1 à Taille.Tab-bloc
+BlocImage = Tab-bloc(i)
+Blocfreq = DCT2 (BlocImage)
+BlocfreqQuant = Quantification (Blocfreq)
+Vectfreq = ZigZag (BlocfreqQuant)
+Vectfind = Vectfinal + compress (Vertfeq)
+
+
+Pour i = 1 à 64 step 8
+pour j 1 à 64 step 8
+l= i 
+Cal = j
+ChargeBloc = (i,j)
