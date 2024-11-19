@@ -71,6 +71,7 @@ Blocfreq = DCT2 (BlocImage)
 BlocfreqQuant = Quantification (Blocfreq)
 Vectfreq = ZigZag (BlocfreqQuant)
 Vectfind = Vectfinal + compress (Vertfeq)
+finPour
 
 
 Pour i = 1 à 64 step 8
