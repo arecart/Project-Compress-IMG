@@ -116,6 +116,6 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 
 - **reconstruire_image (utils.py)**
     ```bash
-    Description : Reconstitue l'image à partir des blocs décompressés.
-    Entrée : Liste de blocs, largeur et hauteur de l'image.
+    Description : Reconstitue l"'"image à partir des blocs décompressés.
+    Entrée : Liste de blocs, largeur et hauteur de l"'"image.
     Sortie : Image reconstruite sous forme de tableau NumPy.
