@@ -86,7 +86,7 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 
 - **crea_bloc (modules/block.py)**
     ```bash
-    Description : Divise l'image en blocs de 8x8 pixels.
+    Description : Divise image en blocs de 8x8 pixels.
     Entrée : Image sous forme de tableau NumPy.
     Sortie : Liste de blocs 8x8.
 
@@ -116,6 +116,6 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 
 - **reconstruire_image (utils.py)**
     ```bash
-    Description : Reconstitue l"'"image à partir des blocs décompressés.
-    Entrée : Liste de blocs, largeur et hauteur de l"'"image.
+    Description : Reconstitue image à partir des blocs décompressés.
+    Entrée : Liste de blocs, largeur et hauteur de image.
     Sortie : Image reconstruite sous forme de tableau NumPy.
