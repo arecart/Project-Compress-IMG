@@ -5,7 +5,6 @@
 - [Fonctionnalités](#fonctionnalités)
 - [Lib-Utilisées](#Lib-Utilisées)
 - [Installation](#installation)
-- [Lancement](#Lancement)
 - [Structure](#Structure)
 - [Fichiers](#Fichiers)
 - [Fonctions-Principales](#Fonctions-Principales)
@@ -37,29 +36,27 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
    git clone https://github.com/skylostt/Project-Compress-IMG.git
    cd projet-compression-image
 
-## Installer les Dépendances
+ 
+2. **Installer les Dépendances**
+    ```bash
+    pip install -r requirements.txt
 
+3. **Optionnel**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Sur Windows : venv\Scripts\activate
 
-- **pip install -r requirements.txt**
+4. **Installation lib**
+    ```bash
+    pip install -r requirements.txt
 
-## Optionnel 
-
-- Vous pouvez aussi le faire sous un environnement virtuel avec : 
-
-- **python -m venv venv**
-- **source venv/bin/activate  # Sur Windows : venv\Scripts\activate**
-
-- puis : 
-
-- **pip install -r requirements.txt**
-
-## Lancement 
-
-- **python(3) main.py**
+5. **Lancement**
+    ```bash
+    python(3) main.py**
 
 ## Structure
 
-- image_compression/
+- Project-Compress-IMG/
 - │
 - ├── main.py
 - ├── modules/
@@ -89,31 +86,31 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 ## Fonctions Principales
 
 - **crea_bloc (modules/block.py)**
-- Description : Divise l'image en blocs de 8x8 pixels.
-- Entrée : Image sous forme de tableau NumPy.
-- Sortie : Liste de blocs 8x8.
+Description : Divise l'image en blocs de 8x8 pixels.
+Entrée : Image sous forme de tableau NumPy.
+Sortie : Liste de blocs 8x8.
 
 - **dct2 et idct2 (modules/dct_module.py)**
-- Description : Applique la Transformation en Cosinus Discrète et son inverse.
-- Entrée : Bloc 8x8.
-- Sortie : Bloc transformé ou reconstruit.
+Description : Applique la Transformation en Cosinus Discrète et son inverse.
+Entrée : Bloc 8x8.
+Sortie : Bloc transformé ou reconstruit.
 
 - **quantization et inverse_quantization (modules/quantization.py)**
-- Description : Quantifie et déquantifie les coefficients DCT.
-- Entrée : Bloc DCT et matrice de quantification.
-- Sortie : Bloc quantifié ou déquantifié.
+Description : Quantifie et déquantifie les coefficients DCT.
+Entrée : Bloc DCT et matrice de quantification.
+Sortie : Bloc quantifié ou déquantifié.
 
 - **zigzag_order_function et inverse_zigzag_order (modules/zigzag.py)**
-- Description : Réorganise les coefficients en ordre zig-zag et inverse.
-- Entrée : Bloc 8x8 ou vecteur 1x64.
-- Sortie : Vecteur zig-zag ou bloc reconstruit.
+Description : Réorganise les coefficients en ordre zig-zag et inverse.
+Entrée : Bloc 8x8 ou vecteur 1x64.
+Sortie : Vecteur zig-zag ou bloc reconstruit.
 
 - **compresser et decompresser (modules/compression.py)**
-- Description : Compresse et décompresse les blocs en utilisant RLE.
-- Entrée : Blocs et matrice de quantification ou données compressées.
-- Sortie : Données compressées ou blocs décompressés.
+Description : Compresse et décompresse les blocs en utilisant RLE.
+Entrée : Blocs et matrice de quantification ou données compressées.
+Sortie : Données compressées ou blocs décompressés.
 
 - **reconstruire_image (utils.py)**
-- Description : Reconstitue l'image à partir des blocs décompressés.
-- Entrée : Liste de blocs, largeur et hauteur de l'image.
-- Sortie : Image reconstruite sous forme de tableau NumPy.
+Description : Reconstitue l'image à partir des blocs décompressés.
+Entrée : Liste de blocs, largeur et hauteur de l'image.
+Sortie : Image reconstruite sous forme de tableau NumPy.
