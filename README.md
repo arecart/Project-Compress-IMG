@@ -36,7 +36,6 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
    git clone https://github.com/skylostt/Project-Compress-IMG.git
    cd projet-compression-image
 
- 
 2. **Installer les Dépendances**
     ```bash
     pip install -r requirements.txt
@@ -52,7 +51,7 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 
 5. **Lancement**
     ```bash
-    python(3) main.py**
+    python(3) main.py
 
 ## Structure
 
@@ -86,31 +85,37 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 ## Fonctions Principales
 
 - **crea_bloc (modules/block.py)**
-Description : Divise l'image en blocs de 8x8 pixels.
-Entrée : Image sous forme de tableau NumPy.
-Sortie : Liste de blocs 8x8.
+    ```bash
+    Description : Divise l'image en blocs de 8x8 pixels.
+    Entrée : Image sous forme de tableau NumPy.
+    Sortie : Liste de blocs 8x8.
 
 - **dct2 et idct2 (modules/dct_module.py)**
-Description : Applique la Transformation en Cosinus Discrète et son inverse.
-Entrée : Bloc 8x8.
-Sortie : Bloc transformé ou reconstruit.
+    ```bash
+    Description : Applique la Transformation en Cosinus Discrète et son inverse.
+    Entrée : Bloc 8x8.
+    Sortie : Bloc transformé ou reconstruit.
 
 - **quantization et inverse_quantization (modules/quantization.py)**
-Description : Quantifie et déquantifie les coefficients DCT.
-Entrée : Bloc DCT et matrice de quantification.
-Sortie : Bloc quantifié ou déquantifié.
+    ```bash
+    Description : Quantifie et déquantifie les coefficients DCT.
+    Entrée : Bloc DCT et matrice de quantification.
+    Sortie : Bloc quantifié ou déquantifié.
 
 - **zigzag_order_function et inverse_zigzag_order (modules/zigzag.py)**
-Description : Réorganise les coefficients en ordre zig-zag et inverse.
-Entrée : Bloc 8x8 ou vecteur 1x64.
-Sortie : Vecteur zig-zag ou bloc reconstruit.
+    ```bash
+    Description : Réorganise les coefficients en ordre zig-zag et inverse.
+    Entrée : Bloc 8x8 ou vecteur 1x64.
+    Sortie : Vecteur zig-zag ou bloc reconstruit.
 
 - **compresser et decompresser (modules/compression.py)**
-Description : Compresse et décompresse les blocs en utilisant RLE.
-Entrée : Blocs et matrice de quantification ou données compressées.
-Sortie : Données compressées ou blocs décompressés.
+    ```bash
+    Description : Compresse et décompresse les blocs en utilisant RLE.
+    Entrée : Blocs et matrice de quantification ou données compressées.
+    Sortie : Données compressées ou blocs décompressés.
 
 - **reconstruire_image (utils.py)**
-Description : Reconstitue l'image à partir des blocs décompressés.
-Entrée : Liste de blocs, largeur et hauteur de l'image.
-Sortie : Image reconstruite sous forme de tableau NumPy.
+    ```bash
+    Description : Reconstitue l'image à partir des blocs décompressés.
+    Entrée : Liste de blocs, largeur et hauteur de l'image.
+    Sortie : Image reconstruite sous forme de tableau NumPy.
