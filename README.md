@@ -12,7 +12,8 @@
 
 ## Introduction
 
-Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un algorithme de compression d'image de base inspiré par la norme de compression JPEG. Il utilise la Transformation en Cosinus Discrète (DCT), la quantification, l'ordre zig-zag et le codage par Longueur d'Exécution (RLE) pour compresser et décompresser les images de manière efficace.
+Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un algorithme de compression d'image simple inspiré du standard JPEG. Il utilise la Transformation en Cosinus Discrète (DCT), la quantification, l'ordre zig-zag et le codage par longueur d'exécution (RLE) pour compresser et décompresser les images.
+
 
 ## Fonctionnalités
 
