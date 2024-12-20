@@ -65,7 +65,10 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 - │   ├── dct_module.py
 - │   ├── quantization.py
 - │   └── zigzag.py
-- ├── utils.py
+- ├── utils/
+- │   ├── __init__.py
+- │   ├── quant_qualite.py
+- │   └── reconstruire_image.py
 - ├── requirements.txt
 - └── README.md
 
@@ -78,7 +81,7 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
 - **quantization.py** : Gère la quantification des coefficients DCT.
 - **zigzag.py** : Réorganise les coefficients en ordre zig-zag.
 - **compression.py** : Gère le codage et décodage RLE.
-- **utils.py** : Fonctions utilitaires pour reconstruire l'image.
+- **utils/** : Contient les fonctions pour ajuster la matrice de quant en fonction de la qualité et reconstruire l'image.
 - **requirements.txt** : Liste des dépendances Python.
 - **README.md** : Vous êtes ici :).
 
@@ -114,7 +117,7 @@ Bienvenue dans le **Projet de Compression d'Images** ! Ce projet implémente un 
     Entrée : Blocs et matrice de quantification ou données compressées.
     Sortie : Données compressées ou blocs décompressés.
 
-- **reconstruire_image (utils.py)**
+- **reconstruire_image (utils/reconstruire_image.py)**
     ```bash
     Description : Reconstitue image à partir des blocs décompressés.
     Entrée : Liste de blocs, largeur et hauteur de image.
